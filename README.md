@@ -124,3 +124,23 @@ The 5g toolbox and Communications Toolbox Wireless Network Simulation Library an
 - **Channel model for all links: 3GPP TR 38.901, for modeling an urban macro scenario.**
   - Scenario: "UMa"
   - ScenarioExtents: [minX minY width height]
+ 
+# **Metrics**
+
+```
+% Calculate overall throughput and fairness
+gNB_received_bytes = statistics(gNB, "all").MAC.ReceivedBytes;
+gNB_received_bits = gNB_received_bytes * 8;
+throuput = gNB_received_bits / simulationTime;
+
+ues_throughputs = zeros(1, numUsers);
+for ueIdx = 1:numUsers
+ ues_throughputs(ueIdx) = statistics(gNB, "all").MAC.Destinations(ueIdx).ReceivedBytes * 8;
+ ues_throughputs(ueIdx) = ues_throughputs(ueIdx) / simulationTime;
+end
+
+fair_numerator = (sum(ues_throughputs))^2;
+fair_denominator = numUsers * sum(ues_throughputs.^2);
+fairness = fair_numerator / fair_denominator;
+
+```
