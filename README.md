@@ -121,3 +121,4 @@ The 5g toolbox and Communications Toolbox Wireless Network Simulation Library an
   - Even index: VOIP traffic pattern
   - Odd index: FTP traffic patter
 
+- **Channel model for all links: 3GPP TR 38.901, for modeling an urban macro scenario.**
