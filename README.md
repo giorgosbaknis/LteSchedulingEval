@@ -93,5 +93,25 @@ This document provides an overview of two popular scheduling algorithms used in 
 
 Both Round Robin and Proportional Fair algorithms serve unique purposes in LTE. Round Robin provides simple, equal access to resources and is useful for equal-demand scenarios. Proportional Fair scheduling, however, is designed for higher throughput, adapting to varying channel conditions while balancing user demand and fairness. Choosing the right scheduling algorithm depends on the network’s goals for throughput, fairness, and computational resources.
 
+---
+
+# Network Configuration
+
+The 5g toolbox and Communications Toolbox Wireless Network Simulation Library and Communications Toolbox were used to implement the network.
+
+-**Base node configuration**
+  - Position          [0 0 30]
+  - DuplexMode        FDD
+  - CarrierFrequency  2.6e9
+  - ChannelBandwidth  30e6
+  - SubcarrierSpacing 15e3
+  - ReceiveGain       11
+
+
+-**User Equipment configuration**
+  -Name         Dynamic value based on index in array 
+  -Position     Dynamic value based on index in array
+  -ReceiveGain  11
+
 
 
