@@ -165,3 +165,12 @@ fair_denominator = numUsers * sum(ues_throughputs.^2);
 fairness = fair_numerator / fair_denominator;
 
 ```
+
+# **Experiments**
+
+- Separate experiments were performed for each scheduler and for each different set of users.
+- The schedulers used are Round Robin and Proportional Fair and the different numbers of users are 8, 16, 24, 32. 
+- Users are placed on a straight line on the x-axis with fixed distances between them. 
+- The number of frames for which the simulation was performed was 10 ms.
+
+
