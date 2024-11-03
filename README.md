@@ -99,7 +99,7 @@ Both Round Robin and Proportional Fair algorithms serve unique purposes in LTE. 
 
 The 5g toolbox and Communications Toolbox Wireless Network Simulation Library and Communications Toolbox were used to implement the network.
 
--**Base node configuration**
+- **Base node configuration**
   - Position          [0 0 30]
   - DuplexMode        FDD
   - CarrierFrequency  2.6e9
@@ -108,7 +108,7 @@ The 5g toolbox and Communications Toolbox Wireless Network Simulation Library an
   - ReceiveGain       11
 
 
--**User Equipment configuration**
+- **User Equipment configuration**
   -Name         Dynamic value based on index in array 
   -Position     Dynamic value based on index in array
   -ReceiveGain  11
