@@ -109,9 +109,9 @@ The 5g toolbox and Communications Toolbox Wireless Network Simulation Library an
 
 
 - **User Equipment configuration**
-  - Name         Dynamic value based on index in array 
-  - Position     Dynamic value based on index in array
-  - ReceiveGain  11
+  - Name     |    Dynamic value based on index in array 
+  - Position |    Dynamic value based on index in array
+  - ReceiveGain | 11
 
 - Scheduler configuration
   - Base node              Configured Base Node
