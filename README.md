@@ -127,6 +127,27 @@ The 5g toolbox and Communications Toolbox Wireless Network Simulation Library an
  
 # **Metrics**
 
+## **Throughput**
+Throughput defined as the eﬀective ability of a network in sending data
+
+$$
+Throughput = \frac{\sum \text{Rx Packet Size}}{\text{Delivery Time}}
+$$
+
+## **Fairness**
+Fairness Index defined as the level of fairness of scheduling algorithms in schedule packages
+and allocation of resources to be sent
+
+$$
+f(x) = \frac{\left(\sum_{i=1}^n x_i\right)^2}{n \sum_{i=1}^n x_i^2}
+$$
+
+
+
+## **Delay**
+TODO
+
+## **Implementations**
 ```
 % Calculate overall throughput and fairness
 gNB_received_bytes = statistics(gNB, "all").MAC.ReceivedBytes;
