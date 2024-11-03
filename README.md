@@ -113,5 +113,8 @@ The 5g toolbox and Communications Toolbox Wireless Network Simulation Library an
   - Position     Dynamic value based on index in array
   - ReceiveGain  11
 
+- Scheduler configuration
+  - Base node              Configured Base Node
+  - ResourceAllocationType 0
 
 
