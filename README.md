@@ -35,3 +35,63 @@ This repository aims to evaluate the performance of different scheduling algorit
 - **High Data Rates:** Adaptive modulation and efficient resource usage enable high data rates.
 
 ---
+
+# LTE Scheduling Algorithms: Round Robin and Proportional Fair
+
+This document provides an overview of two popular scheduling algorithms used in LTE (Long-Term Evolution) networks for resource allocation: **Round Robin (RR)** and **Proportional Fair (PF)**. These algorithms help manage network resources, balancing user fairness and overall network performance.
+
+---
+
+## 1. Round Robin (RR) Scheduling
+
+**Round Robin (RR)** is a time-based scheduling algorithm that treats all users equally by allocating resources in a cyclic manner.
+
+- **How It Works:** 
+  - The eNodeB assigns radio resources to each user sequentially, without considering channel quality or data rate needs. For example, each user is allocated a time slot in order (User 1, then User 2, then User 3, etc.) before cycling back to the first user.
+  - Each user receives an equal amount of time on the channel, resulting in fair access by time.
+
+- **Advantages of Round Robin Scheduling:**
+  - **Fairness**: Ensures all users have equal access to network resources.
+  - **Simplicity**: Easy to implement and requires minimal computational resources.
+
+- **Disadvantages of Round Robin Scheduling:**
+  - **Inefficiency in Varying Conditions**: It does not consider users’ channel conditions, potentially leading to inefficiency.
+  - **Lower Overall Throughput**: Allocates resources regardless of channel quality, resulting in lower network throughput, especially for users in low-signal areas.
+
+---
+
+## 2. Proportional Fair (PF) Scheduling
+
+**Proportional Fair (PF)** scheduling balances fairness and efficiency by considering both the user’s current channel quality and their historical average throughput.
+
+- **How It Works:**
+  - The PF scheduler prioritizes users with a high instantaneous data rate relative to their average throughput, allowing them to transmit when channel conditions are favorable.
+  - This approach combines **short-term scheduling** (to maximize network performance) with **long-term fairness** (to ensure all users have reasonable access).
+
+- **Advantages of Proportional Fair Scheduling:**
+  - **Higher Throughput**: Utilizes favorable channel conditions to maximize overall network throughput.
+  - **Fair Access Based on Demand**: Balances user needs with network efficiency by allocating more resources to users with high relative channel quality.
+
+- **Disadvantages of Proportional Fair Scheduling:**
+  - **Complexity**: More computationally intensive, requiring the eNodeB to track users’ average throughput and channel quality.
+  - **Potential Fairness Issues in High Demand**: Users with consistently poor channel conditions may experience reduced throughput, especially in congested networks.
+
+---
+
+## Comparison Summary
+
+| Feature                | Round Robin (RR)             | Proportional Fair (PF)            |
+|------------------------|------------------------------|------------------------------------|
+| **Fairness**           | High (equal time allocation) | Moderate (fair access with throughput focus) |
+| **Efficiency**         | Low (ignores channel quality)| High (adapts to channel conditions) |
+| **Complexity**         | Low                          | Moderate to High                  |
+| **Best Use Cases**     | Equal demand, similar signal conditions | Varied user conditions, higher throughput requirements |
+
+---
+
+### In Summary
+
+Both Round Robin and Proportional Fair algorithms serve unique purposes in LTE. Round Robin provides simple, equal access to resources and is useful for equal-demand scenarios. Proportional Fair scheduling, however, is designed for higher throughput, adapting to varying channel conditions while balancing user demand and fairness. Choosing the right scheduling algorithm depends on the network’s goals for throughput, fairness, and computational resources.
+
+
+
