@@ -2,7 +2,7 @@
 
 # LTE Uplink Overview
 
-This repository provides an overview of how the LTE (Long-Term Evolution) uplink works. The uplink refers to the communication link from the user equipment (UE) – such as a smartphone or mobile device – to the base station (eNodeB) in LTE networks. This document outlines the key concepts, steps, and advantages of LTE's uplink design.
+This repository aims to evaluate the performance of different scheduling algorithms based on metrics of throughput, delay, and fairness. The uplink refers to the communication link from the user equipment (UE) – such as a smartphone or mobile device – to the base station (eNodeB) in LTE networks. This document outlines the key concepts, steps, and advantages of LTE's uplink design.
 
 ## Key Concepts
 
