@@ -173,4 +173,11 @@ fairness = fair_numerator / fair_denominator;
 - Users are placed on a straight line on the x-axis with fixed distances between them. 
 - The number of frames for which the simulation was performed was 10 ms.
 
+![Throughput](./img/throughput.jpg)
+
+![Fairness](./img/fairness.jpg)
+
+- We observe that as far as throughput is concerned, as the number of users increases, higher values for PF are observed, while as the number of users is small, RR results in higher throughput. 
+- As far as fairness is concerned when the number of users increases RR has a better result while as the number is small PF has a better result.
+- As the number of users increases the PF increases the throughput of the network as it takes into account the quality metrics of the channel and UEs trying to maximize. RR always allocates resources equally and therefore the fairness values are higher as the number of users increases.
 
